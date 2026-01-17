@@ -1,0 +1,17 @@
+A                       B                       D
+A.py                    C                       MeditationAnimations
+
+./A:
+A.py
+
+./B:
+B.py
+
+./C:
+C.py
+
+./D:
+D.py
+
+./MeditationAnimations:
+base_animations.py      breathe.py              close_eyes.py           dance.py
