@@ -53,6 +53,13 @@ st.markdown("""
     .breathe-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
     .close-eyes-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
     .body-bg { background: linear-gradient(135deg, #134e5e 0%, #71b280 100%); }
+    
+    /* Custom button styling for larger buttons */
+    .stButton > button {
+        height: 150px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -85,7 +92,7 @@ if st.session_state.selection == "Individual":
         if not st.session_state.activity_started:
             st.markdown(f'<p class="activity-instruction">{act["instruction"]}</p>', unsafe_allow_html=True)
             st.markdown('</div>', unsafe_allow_html=True)
-            if st.button("Begin Session", use_container_width=True):
+            if st.button("Begin Session", width="stretch"):
                 st.session_state.activity_started = True
                 st.rerun()
         else:
@@ -97,7 +104,7 @@ if st.session_state.selection == "Individual":
             st.rerun()
     else:
         st.success("Session Complete!")
-        if st.button("Return Home", use_container_width=True):
+        if st.button("Return Home", width="stretch"):
             st.session_state.selection = "Home"
             st.session_state.current_activity = 0
             st.session_state.activity_started = False
@@ -118,14 +125,14 @@ else:
     # 2x2 Grid
     r1c1, r1c2 = st.columns(2)
     with r1c1:
-        if st.button("Individual", use_container_width=True, height=150):
+        if st.button("Individual", width="stretch", key="btn_individual"):
             st.session_state.selection = "Individual"
             st.rerun()
     with r1c2:
-        st.button("Group", use_container_width=True, height=150)
+        st.button("Group", width="stretch", key="btn_group")
         
     r2c1, r2c2 = st.columns(2)
     with r2c1:
-        st.button("Progress", use_container_width=True, height=150)
+        st.button("Progress", width="stretch", key="btn_progress")
     with r2c2:
-        st.button("Settings", use_container_width=True, height=150)
+        st.button("Settings", width="stretch", key="btn_settings")
