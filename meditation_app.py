@@ -152,8 +152,8 @@ class DanceActivity(MindfulnessActivity):
 
 # Activity class mapping
 ACTIVITY_CLASSES = {
-    'breathe': BreatheActivity,
     'close_eyes': CloseEyesActivity,
+    'breathe': BreatheActivity,
     'body_attention': BodyAttentionActivity,
     'dance': DanceActivity
 }
