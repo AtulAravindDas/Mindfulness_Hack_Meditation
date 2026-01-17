@@ -1,4 +1,4 @@
-# MeditationAnimations/base_animations.py
+# Mindfullness/Program/MeditationAnimations/base_animations.py
 
 def get_base_css():
     """Base CSS that all activities need"""
