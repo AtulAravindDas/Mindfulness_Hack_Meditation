@@ -33,22 +33,22 @@ with st.container():
     # Top Row: Buttons A and B
     row1_col1, row1_col2 = st.columns(2)
     with row1_col1:
-        if st.button("A", use_container_width=True, key="btn_a"):
-            st.session_state.selection = "A"
+        if st.button("Individual", use_container_width=True, key="btn_a"):
+            st.session_state.selection = "Individual"
             
     with row1_col2:
-        if st.button("B", use_container_width=True, key="btn_b"):
-            st.session_state.selection = "B"
+        if st.button("Group", use_container_width=True, key="btn_b"):
+            st.session_state.selection = "Group"
 
     # Bottom Row: Buttons C and D
     row2_col1, row2_col2 = st.columns(2)
     with row2_col1:
-        if st.button("C", use_container_width=True, key="btn_c"):
-            st.session_state.selection = "C"
+        if st.button("Classroom", use_container_width=True, key="btn_c"):
+            st.session_state.selection = "Classroom"
             
     with row2_col2:
-        if st.button("D", use_container_width=True, key="btn_d"):
-            st.session_state.selection = "D"
+        if st.button("Sports Team", use_container_width=True, key="btn_d"):
+            st.session_state.selection = "Sports Team"
 
 # --- 5. CONTENT AREA ---
 if 'selection' in st.session_state:
