@@ -1,3 +1,7 @@
 ## Remove the shareable files
 /.share
 
+# Virtual Enviroments
+
+/.venv
+/venv
