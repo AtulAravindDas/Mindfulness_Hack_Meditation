@@ -1,4 +1,4 @@
-# Mindfullness/Program/activities.py
+# activities.py (should be in the root directory, same level as app.py)
 import streamlit as st
 import time
 from MeditationAnimations import get_base_css, get_program_animations

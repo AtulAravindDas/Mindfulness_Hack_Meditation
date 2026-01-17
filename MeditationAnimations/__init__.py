@@ -1,4 +1,4 @@
-# Mindfullness/Program/MeditationAnimations/__init__.py
+# MeditationAnimations/__init__.py
 
 from .breathe import BREATHE_ANIMATIONS
 from .close_eyes import CLOSE_EYES_ANIMATIONS
