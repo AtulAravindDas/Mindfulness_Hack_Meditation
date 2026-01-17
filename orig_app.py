@@ -33,10 +33,10 @@ with st.sidebar:
 
 # --- 4. PROGRAM MAPPING ---
 PROGRAM_MAPPING = {
-    'A': 'Program/A/A.py',
-    'B': 'Program/B/B.py',
-    'C': 'Program/C/C.py',
-    'D': 'Program/D/D.py'
+    'A': 'pages/A.py',
+    'B': 'pages/B.py',
+    'C': 'pages/C.py',
+    'D': 'pages/D.py'
 }
 
 # --- 5. NAVIGATION LOGIC ---
