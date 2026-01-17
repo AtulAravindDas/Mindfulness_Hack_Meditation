@@ -309,8 +309,8 @@ elif st.session_state.selection == "Individual":
     """, unsafe_allow_html=True)
     
     activities = [
-        {'name': 'Breathe', 'bg_class': 'breathe-bg', 'instruction': 'Follow the circle'},
         {'name': 'Close Your Eyes', 'bg_class': 'close-eyes-bg', 'instruction': 'Relax...'},
+        {'name': 'Breathe', 'bg_class': 'breathe-bg', 'instruction': 'Follow the circle'},
         {'name': 'Attention to Body', 'bg_class': 'body-bg', 'instruction': 'Scan your body'}
     ]
     
