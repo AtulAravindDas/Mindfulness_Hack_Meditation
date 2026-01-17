@@ -1,15 +1,8 @@
-# pages/activities.py
+# activities.py (should be in the root directory, same level as app.py)
 import streamlit as st
 import time
-import sys
-from pathlib import Path
-
-# Add parent directory to path for MeditationAnimations
-parent_dir = str(Path(__file__).parent.parent)
-if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
-
 from MeditationAnimations import get_base_css, get_program_animations
+
 class MindfulnessActivity:
     """Base class for all mindfulness activities"""
     
