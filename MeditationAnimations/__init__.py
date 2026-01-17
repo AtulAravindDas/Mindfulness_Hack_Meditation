@@ -9,15 +9,17 @@ from .base_animations import get_base_css
 # Animation configurations for each program
 ANIMATION_CONFIGS = {
     'A': {
-        'breathe': ('breathe', 'circle_pulse'),
         'close_eyes': ('close_eyes', 'dual_eyes'),
+        'breathe': ('breathe', 'circle_pulse'),
+
         'body_attention': ('body_attention', 'scanning_light')
     },
     'B': {
-        'breathe': ('breathe', 'expanding_rings'),
+
         'close_eyes': ('close_eyes', 'moon_fade'),
         'body_attention': ('body_attention', 'chakra_points'),
-        'dance': ('dance', 'flowing_silhouette')
+        'dance': ('dance', 'flowing_silhouette'),
+        'breathe': ('breathe', 'expanding_rings'),
     },
     'C': {
         'breathe': ('breathe', 'lotus_bloom'),
