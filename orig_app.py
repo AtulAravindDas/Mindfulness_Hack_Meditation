@@ -150,10 +150,10 @@ class DanceActivity(MindfulnessActivity):
         return True
 
 
-# Activity class mapping
+# Activity class mapping - ORDER MATTERS: close_eyes FIRST, then breathe
 ACTIVITY_CLASSES = {
-    'breathe': BreatheActivity,
     'close_eyes': CloseEyesActivity,
+    'breathe': BreatheActivity,
     'body_attention': BodyAttentionActivity,
     'dance': DanceActivity
 }
@@ -210,10 +210,11 @@ class ActivitySequence:
                    unsafe_allow_html=True)
         col1, col2, col3 = st.columns([1, 1, 1])
         with col2:
-            if st.button("Return Home", width="stretch", type="primary"):
+            if st.button("Return Home", width="stretch", type="primary", key="completion_home"):
                 st.session_state.selection = "Home"
                 st.session_state.current_activity = 0
                 st.session_state.activity_started = False
+                st.session_state.breath_cycle = 0
                 st.rerun()
 
 
@@ -241,7 +242,7 @@ if 'breath_cycle' not in st.session_state:
 # --- 3. SIDEBAR ---
 with st.sidebar:
     st.title("MindShare")
-    if st.button("Reset to Home"):
+    if st.button("Reset to Home", key="sidebar_home"):
         st.session_state.selection = "Home"
         st.session_state.current_activity = 0
         st.session_state.activity_started = False
@@ -307,9 +308,10 @@ elif st.session_state.selection == "Individual":
     </style>
     """, unsafe_allow_html=True)
     
+    # UPDATED ORDER: Close Your Eyes FIRST, then Breathe
     activities = [
-        {'name': 'Breathe', 'bg_class': 'breathe-bg', 'instruction': 'Follow the circle'},
         {'name': 'Close Your Eyes', 'bg_class': 'close-eyes-bg', 'instruction': 'Relax...'},
+        {'name': 'Breathe', 'bg_class': 'breathe-bg', 'instruction': 'Follow the circle'},
         {'name': 'Attention to Body', 'bg_class': 'body-bg', 'instruction': 'Scan your body'}
     ]
     
